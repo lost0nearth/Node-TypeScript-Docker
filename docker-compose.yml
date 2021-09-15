@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    container_name: node-server
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
